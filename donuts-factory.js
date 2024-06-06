@@ -121,6 +121,28 @@
 
 // alert("The sum of numbers from 0 to " + num + " is: " + sum);
 
+/////////////////////////////////////////////////////////////////////////////(e3)
+
+// let name = prompt(" Please enter your name : ");
+// function askForGender() {
+//     let mf = prompt("Please enter your gender (male, female):");
+
+//     while (mf !== "male" && mf !== "female") {
+//         mf = prompt("Please enter your gender (male, female):").toLowerCase();
+//     }
+
+//     return mf;
+// }
+// let Gender = askForGender();
+
+// if (Gender === "male") {
+//     alert("Hello mr " + name);
+// } else {
+//     alert("Hello ms " + name);
+// }
+
+
+
 
 
 
