@@ -123,7 +123,7 @@
 
 /////////////////////////////////////////////////////////////////////////////(e3)
 
-// let name = prompt(" Please enter your name : ");
+//let name = prompt(" Please enter your name : ");
 // function askForGender() {
 //     let mf = prompt("Please enter your gender (male, female):");
 
@@ -141,10 +141,48 @@
 //     alert("Hello ms " + name);
 // }
 
+////////////////////////////ex4//////////////////////////////////////
+
+    let name = prompt("Please enter your name: ");
+    let gender = prompt("Please enter your gender (male, female): ").toLowerCase();
+    while (gender !== "male" && gender !== "female") {
+        gender = prompt("Please enter your gender (male, female): ").toLowerCase();
+    }
+    let orderType = prompt("Would you like to order Donut, Coffee, Ice cream, or Bakery: ");
+    let orderName = prompt("Please write the name of the order: ");
+
+    // Create elements
+    const div = document.createElement('div');
+    const paragraph = document.createElement('p');
+    const ol = document.createElement('ol');
+    const liOrderType = document.createElement('li');
+    const liOrderName = document.createElement('li');
+
+    // Set text content
+    paragraph.textContent = "Hello " + gender === "male" ? "mr" : "ms" + name  " Your order is getting prepared.";
+    liOrderType.textContent = "Order Type: "+ orderType ;
+    liOrderName.textContent = "Order Name: "+ orderName;
+
+    // Append elements
+    ol.appendChild(liOrderType);
+    ol.appendChild(liOrderName);
+    div.appendChild(paragraph);
+    div.appendChild(ol);
+
+    // Append div to the page
+    document.getElementById("user-order").appendChild(div);
 
 
 
 
+
+
+
+
+
+
+
+    
 
 
 
