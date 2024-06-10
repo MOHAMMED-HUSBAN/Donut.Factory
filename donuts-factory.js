@@ -143,34 +143,39 @@
 
 ////////////////////////////ex4//////////////////////////////////////
 
+
 let name = prompt("Please enter your name: ") ;
 let age = prompt("How old are you: ") ;
+
 let gender = prompt("Please enter your gender (male, female): ").toLowerCase();
 while (gender !== "male" && gender !== "female") {
     gender = prompt("Please enter your gender (male, female): ").toLowerCase();
 }
+
 let orderType = prompt("Would you like to order Donut, Coffee, Ice cream, or Bakery: ") ;
 let orderName = prompt("Please write the name of the order: ") ;
+
 
 const div = document.createElement('div');
 const paragraph = document.createElement('p');
 const ol = document.createElement('ol');
-const liOrderType = document.createElement('li');
 const liOrderName = document.createElement('li');
 const liGender = document.createElement('li');
 const liAge = document.createElement('li');
+const liOrderType = document.createElement('li');
+
 
 liOrderName.textContent = "Customer Name : " + name;
 liGender.textContent = "Customer Gender : " + gender;
 liAge.textContent = "Customer Age : " + age;
 liOrderType.textContent = "Order Type : " + orderType;
 
+div.appendChild(paragraph);
+div.appendChild(ol);
 ol.appendChild(liOrderName);
 ol.appendChild(liGender);
 ol.appendChild(liAge);
 ol.appendChild(liOrderType);
-div.appendChild(paragraph);
-div.appendChild(ol);
 
 document.getElementById("user-order").appendChild(div);
 
