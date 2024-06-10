@@ -1,8 +1,8 @@
-///////////////////////////////////////////////////////////////////////////////////////// ( EX1 )
-
+///////////////////////////////////////////////////////////////////////////////////////// ( EX1   if else  )
+// let  تعريف المتغيرات نطاق محدد //  const المتغيرات الثابتة / لا يمكن إعادة تعريفه في نفس النطاق  var : 
 // let name = prompt(" Please enter your name : ");
 // let Gender = prompt(" Please enter your gender (male or female) : ");
-// if (Gender === " male") {
+// if (Gender === " male") {                      //التحقق من القيمة والنوع
 //   alert(" Hello mr " + name);
 // }
 //  else if (Gender === "female") {
@@ -18,13 +18,13 @@
 // console.log(
 //   " You Have one Customer " + name + " has ordered " + orderType + " ."
 // );
-/////////////////////////////////////////////////////////////////////////////(2.1)
+/////////////////////////////////////////////////////////////////////////////(ex 2.1  Loops)
 
 
 // let name = prompt(" Please enter your name : ");
 // let gender = prompt("Please enter your gender (male, female):");
 
-// while (gender !== "male" && gender !== "female") {
+// while (gender !== "male" && gender !== "female") {       /// للتحقق من عدم المساواة
 //     gender = prompt("Please enter your gender (male, female):").toLowerCase();
 // }
 
@@ -41,7 +41,7 @@
 // console.log(" You Have one Customer " + name + " has ordered " + orderType + " .");
 
 
-/////////////////////////////////////////////////////////////////////////////(2.2)
+/////////////////////////////////////////////////////////////////////////////(ex 2.2  loop array)
 
 
 // let info = [];
@@ -51,23 +51,21 @@
 // .length; i++) {
 //     let answer = '';
     
-//     if (array
-// [i] === 'gender') {
+//     if (array [i] === 'gender') {
 //         while (answer !== 'male' && answer !== 'female' ) {
 //             answer = prompt('Please enter your gender (male, female ):').toLowerCase();
 //         }
 //     } else {
 
-//         answer = prompt('Please enter your ' + array
-// [i] + ':');
+//         answer = prompt('Please enter num to hent ' + array [i] + ':');
 //     }
     
-//     info.push(answer);
+//     info.push(answer);         /بإضافة قيمة إلى نهاية المصفوفة
 // }
 
 // console.log('User information:', info)
 
-/////////////////////////////////////////////////////////////////////////////(2.7)
+/////////////////////////////////////////////////////////////////////////////(ex 2.7)
 
 
 // for (let i = 0; i <= 5; i++) {
@@ -75,28 +73,28 @@
 // }
 
 
-/////////////////////////////////////////////////////////////////////////////(2.8)
+/////////////////////////////////////////////////////////////////////////////(ex 2.8)
 
 
 // let num = [];
 // for (let i = 0; i <= 5; i++) {
-//     num += [i]; // num+i=num
+//    num.push(i); 
 // }     
 // alert(num);
 
 
-/////////////////////////////////////////////////////////////////////////////(2.9)
+/////////////////////////////////////////////////////////////////////////////(ex 2.9)
 
 
 
 // for (let i = 1; i <= 20; i++) {
-//     if (i % 3 === 0) {
+//     if (i % 3 === 0) { // هل الرقم الحالي من مضاعفات ال  باقي قسمه 03
 //         console.log(i);
 //     }
 // }
 
 
-/////////////////////////////////////////////////////////////////////////////(2.10)
+/////////////////////////////////////////////////////////////////////////////(ex 2.10)
 
 
 
@@ -110,7 +108,7 @@
 // alert("You entered: " + num);
 
 
-/////////////////////////////////////////////////////////////////////////////(2.11)
+/////////////////////////////////////////////////////////////////////////////(ex 2.11)
 
 
 // var num = (prompt("Please enter a num :"));
@@ -121,7 +119,7 @@
 
 // alert("The sum of numbers from 0 to " + num + " is: " + sum);
 
-/////////////////////////////////////////////////////////////////////////////(e3)
+/////////////////////////////////////////////////////////////////////////////(ex 3 function )
 
 //let name = prompt(" Please enter your name : ");
 // function askForGender() {
@@ -144,43 +142,83 @@
 ////////////////////////////ex4//////////////////////////////////////
 
 
-let name = prompt("Please enter your name: ") ;
-let age = prompt("How old are you: ") ;
+// let name = prompt("Please enter your name: ") ;
+// let age = prompt("How old are you: ") ;
 
-let gender = prompt("Please enter your gender (male, female): ").toLowerCase();
-while (gender !== "male" && gender !== "female") {
-    gender = prompt("Please enter your gender (male, female): ").toLowerCase();
-}
+// let gender = prompt("Please enter your gender (male, female): ").toLowerCase();
+// while (gender !== "male" && gender !== "female") {
+//     gender = prompt("Please enter your gender (male, female): ").toLowerCase();
+// }
 
-let orderType = prompt("Would you like to order Donut, Coffee, Ice cream, or Bakery: ") ;
-let orderName = prompt("Please write the name of the order: ") ;
-
-
-const div = document.createElement('div');
-const paragraph = document.createElement('p');
-const ol = document.createElement('ol');
-const liOrderName = document.createElement('li');
-const liGender = document.createElement('li');
-const liAge = document.createElement('li');
-const liOrderType = document.createElement('li');
+// let orderType = prompt("Would you like to order Donut, Coffee, Ice cream, or Bakery: ") ;
+// let orderName = prompt("Please write the name of the order: ") ;
 
 
-liOrderName.textContent = "Customer Name : " + name;
-liGender.textContent = "Customer Gender : " + gender;
-liAge.textContent = "Customer Age : " + age;
-liOrderType.textContent = "Order Type : " + orderType;
-
-div.appendChild(paragraph);
-div.appendChild(ol);
-ol.appendChild(liOrderName);
-ol.appendChild(liGender);
-ol.appendChild(liAge);
-ol.appendChild(liOrderType);
-
-document.getElementById("user-order").appendChild(div);
+// const div = document.createElement('div');
+// const paragraph = document.createElement('p');
+// const ol = document.createElement('ol');
+// const liOrderName = document.createElement('li');
+// const liGender = document.createElement('li');
+// const liAge = document.createElement('li');
+// const liOrderType = document.createElement('li');
 
 
+// liOrderName.textContent = "Customer Name : " + name;
+// liGender.textContent = "Customer Gender : " + gender;
+// liAge.textContent = "Customer Age : " + age;
+// liOrderType.textContent = "Order Type : " + orderType;
 
+// div.appendChild(paragraph);
+// div.appendChild(ol);
+// ol.appendChild(liOrderName);
+// ol.appendChild(liGender);
+// ol.appendChild(liAge);
+// ol.appendChild(liOrderType);
+
+// document.getElementById("user-order").appendChild(div);
+
+
+//////////////////////////////////////////////////////////////////////////////event
+
+document.getElementById("user-order-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById("name").value;
+        const age = document.getElementById("age").value;
+        const gender = document.getElementById("gender").value;
+        const orderType = document.getElementById("order-type").value;
+        const drinkType = document.querySelector('input[name="drink-type"]:checked').value;
+        
+        const div = document.createElement('div');
+        const paragraph = document.createElement('p');
+        const ol = document.createElement('ol');
+        const liOrderName = document.createElement('li');
+        const liGender = document.createElement('li');
+        const liAge = document.createElement('li');
+        const liOrderType = document.createElement('li');
+        const liDrinkType = document.createElement('li');
+        
+        liOrderName.textContent = "Customer Name: " + name;
+        liGender.textContent = "Customer Gender: " + gender;
+        liAge.textContent = "Customer Age: " + age;
+        liOrderType.textContent = "Order Type: " + orderType;
+        liDrinkType.textContent = "Drink Type: " + drinkType;
+        
+        div.appendChild(paragraph);
+        div.appendChild(ol);
+        ol.appendChild(liOrderName);
+        ol.appendChild(liGender);
+        ol.appendChild(liAge);
+        ol.appendChild(liOrderType);
+        ol.appendChild(liDrinkType);
+        
+        document.getElementById("user-order").appendChild(div);
+        
+        // Reset form fields
+        document.getElementById("user-order-form").reset();
+    });
+    
+      
 
 
 

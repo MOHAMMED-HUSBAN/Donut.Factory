@@ -1,36 +1,135 @@
+
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
+.container {
+
+    max-width: 1339px;
+    margin: auto;
+}
+
+
 header {
-    position: sticky;
-    background: #ffcc00;
-    color: #fff;
+    font-weight: 1000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #ffc107;
+    padding: 20px 0;
+}
+.container h3 {
+    color: #ffc107;
 }
 
 header h1 {
     margin: 0;
 }
 
-header nav .nav-link {
-    color: #fff;
+.navbar-nav {
+    margin: 0;
 }
+
+.navbar-nav .nav-item {
+    margin-right: 20px;
+}
+
 
 main {
-    padding: 20px;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px 0;
 }
 
-section {
-    margin-bottom: 40px;
+section h2 {
+    color: #333;
+   
+    padding-bottom: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffc107;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#user-order-form {
+    font-weight: 1200;
+    text-align: center;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 400px;
+    margin: auto;
+    color: #079ec0;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+    background-image: url("/Untitled.png");
+    background-size: contain; 
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
 footer {
-    background: #333;
+    background-color: #343a40;
     color: #fff;
-    text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
+}
+
+
+
+
+.welcome-container {
+
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    background-image: url("/Menu_Dunkin_Run_Desktop.png");
+    background-size: contain; 
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+.welcome-heading {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.welcome-message {
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffc107;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
